@@ -3,6 +3,19 @@ from Stack import Stack1
 
 def ten2two(decNumber):
     remstack = Stack1()
+    teststack = Stack1()
+    optional_objects = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    test = decNumber
+    while test > 0:
+        rem = test % 10
+        teststack.push(rem)
+        test = test // 10
+
+    while not teststack.isEmpty():
+        opt = teststack.pop()
+        if opt not in optional_objects:
+            print('无效输入！')
+            exit()
 
     while decNumber > 0:
         rem = decNumber % 2
@@ -32,7 +45,3 @@ def two2ten(decNumber):
         i = i + 1
 
     return binString
-
-
-s = two2ten
-print(s(111))
