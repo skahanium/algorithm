@@ -2,6 +2,9 @@ from Stack import Stack1
 
 
 def ten2two(decNumber):
+    '''
+    十进制转化二进制
+    '''
     remstack = Stack1()
     teststack = Stack1()
     optional_objects = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -30,6 +33,9 @@ def ten2two(decNumber):
 
 
 def two2ten(decNumber):
+    '''
+    二进制转化十进制
+    '''
     remstack = Stack1()
 
     while decNumber > 0:
@@ -45,3 +51,26 @@ def two2ten(decNumber):
         i = i + 1
 
     return binString
+
+
+def baseConverter(decNumber, base):
+    '''
+    十进制转化为任何进制
+    '''
+    digits = '0123456789ABCDEF'
+    remstack = Stack1()
+
+    while decNumber > 0:
+        rem = decNumber % base
+        remstack.push(rem)
+        decNumber = decNumber // base
+
+    newString = ''
+    while not remstack.isEmpty():
+        newString = newString + digits[remstack.pop()]
+
+    return newString
+
+
+s = baseConverter
+print(s(100, 5))

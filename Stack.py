@@ -3,11 +3,11 @@ class Stack1:
     创建一个尾端栈顶的空栈，不包含任何数据项。
     特性：反转次序、后进先出。
     方法：
-    （1）isEmpty
-    （2）push
-    （3）pop
-    （4）peek
-    （5）size
+    （1）isEmpty()
+    （2）push(item)
+    （3）pop()
+    （4）peek()
+    （5）size()
     '''
 
     def __init__(self):
