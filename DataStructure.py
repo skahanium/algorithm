@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 
 
 class Stack:
@@ -8,7 +8,7 @@ class Stack:
         Returns:
             List: 空栈
         """
-        self.items = []
+        self.items: List[Any] = []
 
     def isEmpty(self) -> bool:
         """检查栈是否为空，无需参数，返回布尔值。
@@ -58,7 +58,7 @@ class Queue:
         Returns:
             List: 空队列
         """
-        self.items = []
+        self.items: List[Any] = []
 
     def isEmpty(self) -> bool:
         """检查队列是否为空，无需参数，返回布尔值。
@@ -100,7 +100,7 @@ class Deque:
         Returns:
             List: 空双端队列
         """
-        self.items = []
+        self.items: List[Any] = []
 
     def isEmpty(self) -> bool:
         """检查双端队列是否为空，无需参数，返回布尔值。
@@ -260,6 +260,8 @@ class UnorderedList:
             item (Any): 删除项
         """
         current = self.head
+        assert current is not None
+
         previous = None
         found = False
         while not found:
@@ -355,6 +357,8 @@ class OrderedList:
             item (Any): 删除项
         """
         current = self.head
+        assert current is not None
+
         previous = None
         found = False
         while not found:
