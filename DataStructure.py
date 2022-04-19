@@ -156,7 +156,7 @@ class Node:
         """初始化节点，得到一个节点。
 
         Args:
-            data (Any): 节点数据
+            initdata (Any): 节点数据
             next (Any): 下一个节点
         """
         self.data = initdata
@@ -200,7 +200,7 @@ class UnorderedList:
         """初始化无序链表，得到一个空无序链表。
 
         Returns:
-            List: 空无序链表
+            None
         """
         self.head = None
 
@@ -281,7 +281,7 @@ class OrderedList:
         """初始化有序链表，得到一个空有序链表。
 
         Returns:
-            List: 空有序链表
+            None
         """
         self.head = None
 
