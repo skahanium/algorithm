@@ -7,8 +7,9 @@ authors = [
 ]
 dependencies = [
     "numpy>=1.22.3",
+    "notebook>=6.4.12",
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10, <3.11"
 license = {text = "MIT"}
 
 [tool.pdm]

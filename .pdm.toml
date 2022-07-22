@@ -1,2 +1,2 @@
 [python]
-path = "D:\\Scoop\\shims\\python3.exe"
+path = "/opt/homebrew/Cellar/python@3.10/3.10.5/Frameworks/Python.framework/Versions/3.10/bin/python3.10"
